@@ -4,8 +4,7 @@
     ".vscode": true,
     ".gitignore": true,
     "package.json": true,
-    "package-lock.json": true,
-    "public": true
+    "package-lock.json": true
   },
   "files.associations": {
     "*.js": "javascriptreact",
