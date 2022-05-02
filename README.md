@@ -12,8 +12,8 @@
 # Tecnologias
 Para a construção do projeto utilizei as seguintes tecnologias:
   <ul> 
-    <li>HTML</li>
-    <li>CSS</li>
+    <li>CSS import</li>
+    <li>CSS modules</li>
     <li>JavaScript</li>
     <li>React</li>
     <li>React - Router</li>
