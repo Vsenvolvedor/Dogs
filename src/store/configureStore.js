@@ -6,7 +6,6 @@ import feed from "./feed";
 import ui from "./ui";
 import photoPost from "./photoPost";
 
-
 const middleware = () => (defaultMiddleware) => {
   return [...defaultMiddleware()]
 };

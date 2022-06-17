@@ -1,8 +1,8 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { PHOTO_POST } from '../../Api'
-import useFetch from '../../Hooks/useFetch'
 import useForm from '../../Hooks/useForm'
+import { photoPost } from '../../store/photoPost'
 import Button from '../Form/Button'
 import Input from '../Form/Input'
 import Error from '../Helper/Error'
@@ -14,14 +14,16 @@ const UserPhotoPost = () => {
   const peso = useForm('number');
   const idade = useForm('number');
   const [img, setImg] = React.useState({});
-  const {data, error, loading, request} = useFetch()
-  const navigate = useNavigate()
+  const {data, error, loading} = useSelector(state => state.photoPost);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { token } = useSelector(state => state.token.data);
 
   React.useEffect(() => {
     if(data) {
       navigate('/conta');
     }
-  }, [data])
+  }, [data, navigate])
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -31,9 +33,7 @@ const UserPhotoPost = () => {
     formData.append('peso', peso.value)
     formData.append('idade', idade.value)
 
-    const token = window.localStorage.getItem('token')
-    const {url, options} = PHOTO_POST(formData,token)
-    request(url, options)
+    dispatch(photoPost({formData, token}));
   }
 
   function handleImgChange({target}) {
