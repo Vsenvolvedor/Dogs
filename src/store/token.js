@@ -3,7 +3,12 @@ import createAsyncSlice from "./helper/createAsyncSlice";
 
 const slice = createAsyncSlice({
   name: 'token',
-  fetchConfig: (user) => TOKEN_POST(user) 
+  fetchConfig: (user) => TOKEN_POST(user),
+  initialState: {
+    data: {
+      token: window.localStorage.getItem('token') || null
+    }
+  } 
 });
 
 export const fetchToken = slice.asyncAction;
