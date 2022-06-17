@@ -18,6 +18,7 @@ Para a construção do projeto utilizei as seguintes tecnologias:
     <li>React</li>
     <li>React - Router</li>
     <li>Victory - Biblioteca de gráficos</li>
+    <li>Redux</li>
   </ul>
 
 # Sobre
@@ -25,6 +26,7 @@ Para a construção do projeto utilizei as seguintes tecnologias:
   O projeto se trata de uma rede social para cachorros. 
 </p>
 <p> Criado para o curso de React da <a target="_blank" href="https://www.origamid.com/">Origamid.</a></p>
+<p> Com redux implementado posteriormente para o curso de redux da <a target="_blank" href="https://www.origamid.com/">Origamid.</a></p>
 
 ## Funcionalidades
 
@@ -33,8 +35,9 @@ Para a construção do projeto utilizei as seguintes tecnologias:
   - [X]Modal
   - [X]Consumo de Api
   - [X]Uso de biblioteca externa
+  - [X]Redux gerenciando o estado da aplicação
 
-# Veja o projeto aqui
+# Veja o projeto aqui (sem redux)
 ## [Dogs](https://dogs.origamid.dev/)
 
 ## Pagina home
@@ -49,4 +52,4 @@ Para a construção do projeto utilizei as seguintes tecnologias:
 <img align='center' src='./github/user.PNG'/>
 <hr/>
 
-#### Feito por Vitor para o curso de React 👍 | Veja meu [Linkedin](https://www.linkedin.com/in/vitor-lemos-1a61b3238/)
+#### Feito por Vitor para o curso de React/Redux 👍 | Veja meu [Linkedin](https://www.linkedin.com/in/vitor-lemos-1a61b3238/)
