@@ -22,7 +22,7 @@ const initialState = {
   data: null
 };
 
-export default function photo(state, action) {
+export default function photo(state = initialState, action) {
   switch(action.type) {
     case FETCH_PHOTO_STARTED: 
       return {
@@ -55,6 +55,7 @@ export const fetchPhoto = (id) => async (dispatch) => {
     dispatch(fetchPhotoStarted());
     const { url, options } = PHOTO_GET(id)
     const response = await fetch(url, options);
+    if(response.ok === false) throw new Error(data.message);
     const data = await response.json();
     dispatch(fetchPhotoSucess(data))
   } catch(err) {
