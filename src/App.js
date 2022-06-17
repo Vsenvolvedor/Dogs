@@ -10,8 +10,17 @@ import NotFound from "./Components/NotFound";
 import Photo from "./Components/Photo/Photo";
 import User from "./Components/User/User";
 import UserProfile from "./Components/User/UserProfile";
+import { autoLogin } from "./store/user";
+import { useDispatch } from 'react-redux'
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(autoLogin());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <BrowserRouter> 
